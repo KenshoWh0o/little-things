@@ -1,3 +1,6 @@
+#PokePython
+#A program that simulates opening Pokémon booster packs.
+
 import random
 
 # Définition des cartes Pokémon
