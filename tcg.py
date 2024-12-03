@@ -1,18 +1,22 @@
 import random
 
 # Définition des cartes Pokémon
-Salameche = "Salameche, 30 PV, *"
-Reptincel = "Reptincel, 60 PV, **"
-Dracaufeu = "Dracaufeu, 120 PV, ***"
-DracaufeuEx = "Dracaufeu EX, 180 PV, ****"
-Carapuce = "Carapuce, 30 PV, *"
-Carabaffe = "Carabaffe, 60 PV, **"
-Tortank = "Tortank, 120 PV, ***"
-TortankEx = "Tortank EX, 180 PV, ****"
-Bulbizarre = "Bulbizarre, 30 PV, *"
-Herbizarre = "Herbizarre, 60 PV, **"
-Florizarre = "Florizarre, 120 PV, ***"
-FlorizarreEx = "Florizarre EX, 180 PV, ****"
+Salameche = "Salameche - *"
+Reptincel = "Reptincel - **"
+Dracaufeu = "Dracaufeu - ***"
+DracaufeuEx = "Dracaufeu EX - ****"
+Carapuce = "Carapuce - *"
+Carabaffe = "Carabaffe - **"
+Tortank = "Tortank - ***"
+TortankEx = "Tortank EX - ****"
+Bulbizarre = "Bulbizarre - *"
+Herbizarre = "Herbizarre - **"
+Florizarre = "Florizarre - ***"
+FlorizarreEx = "Florizarre EX - ****"
+Chenipan = "Chenipan - *"
+Chrysacier = "Chrysacier - **"
+Papilusion = "Papilusion - ***"
+
 
 # Définition des boosters
 pokemons = [Salameche, Carapuce, Bulbizarre, Reptincel, Carabaffe, Herbizarre, 
@@ -34,7 +38,10 @@ def random_pokemon4star():
 
 # Fonction principale
 def main():
+    print("=========================================")
     print("Bienvenue dans le jeu de cartes Pokémon !")
+    print("=========================================")
+    print()
     print("Pour ouvrir un booster, appuyez sur Entrée.")
     input()
     print("Voici les cartes que vous avez obtenues :")
