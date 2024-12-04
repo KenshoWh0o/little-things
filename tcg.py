@@ -3,30 +3,30 @@
 
 import random
 
-# Définition des cartes Pokémon
-Salameche = "#1 - Salameche - *"
-Reptincel = "#2 - Reptincel - **"
-Dracaufeu = "#3 - Dracaufeu - ***"
-DracaufeuEx = "#4 - Dracaufeu EX - ****"
-Carapuce = "#5 - Carapuce - *"
-Carabaffe = "#6 - Carabaffe - **"
-Tortank = "#7 - Tortank - ***"
-TortankEx = "#8 - Tortank EX - ****"
-Bulbizarre = "#9 - Bulbizarre - *"
-Herbizarre = "#10 - Herbizarre - **"
-Florizarre = "#11 - Florizarre - ***"
-FlorizarreEx = "# 12 - Florizarre EX - ****"
+# Variables
+Charmander = "#1 - Charmander - *"
+Charmelon = "#2 - Charmelon - **"
+Charizard = "#3 - Charizard - ***"
+CharizardEx = "#4 - Charizard EX - ****"
+Squirtle = "#5 - Squirtle - *"
+Wartortle = "#6 - Wartortle - **"
+Blastoise = "#7 - Blastoise - ***"
+BlastoiseEx = "#8 - Blastoise EX - ****"
+Bulbasaur = "#9 - Bulbasaur - *"
+Ivysaur = "#10 - Ivysaur - **"
+Venusaur = "#11 - Venusaur - ***"
+VenusaurEx = "# 12 - Venusaur EX - ****"
 
 
-# Définition des boosters
-pokemons = [Salameche, Carapuce, Bulbizarre, Reptincel, Carabaffe, Herbizarre, 
-            Dracaufeu, Tortank, Florizarre, DracaufeuEx, TortankEx, FlorizarreEx]
+# Lists
+pokemons = [Charmander, Squirtle, Bulbasaur, Charmelon, Wartortle, Ivysaur, 
+            Charizard, Blastoise, Venusaur, CharizardEx, BlastoiseEx, VenusaurEx]
 pokemon1star = pokemons[0:3]
 pokemon2star = pokemons[3:6]
 pokemon3star = pokemons[6:9]
 pokemon4star = pokemons[9:12]
 
-# Fonctions pour obtenir des cartes aléatoires
+# Functions obtaining random cards
 def random_pokemon1star():
     return random.choice(pokemon1star)
 def random_pokemon2star():
@@ -36,10 +36,10 @@ def random_pokemon3star():
 def random_pokemon4star():
     return random.choice(pokemon4star)
 
-# Fonction pour obtenir un booster complet
+# Functions opening a booster
 def godpack():
     print()
-    input("Voici les cartes que vous avez obtenues (appuyez sur Entrée pour passer à la carte suivante) :")
+    input("There are the cards you obtained (press Enter to see the next card) :")
     input(random_pokemon2star())
     input(random_pokemon3star())
     input(random_pokemon3star())
@@ -50,7 +50,7 @@ def godpack():
 
 def basepack():
     print()
-    input("Voici les cartes que vous avez obtenues (appuyez sur Entrée pour passer à la carte suivante) :")
+    input("There are the cards you obtained (press Enter to see the next card) :")
     input(random_pokemon1star())
     input(random_pokemon1star())
     input(random_pokemon2star())
@@ -70,56 +70,46 @@ def booster():
     else:
         basepack()
 
-# Fonction pour afficher tous les pokémons
+# Function displaying every pokemon
 def showallpokemons():
     print()
-    print("Voici la liste de tous les pokémons (appuyez sur Entrée pour retourner au menu) :")
+    print("There is the list of every pokemon (press Enter to go back to menu) :")
     print()
-    print(Salameche)
-    print(Reptincel)
-    print(Dracaufeu)
-    print(DracaufeuEx)
-    print(Carapuce)
-    print(Carabaffe)
-    print(Tortank)
-    print(TortankEx)
-    print(Bulbizarre)
-    print(Herbizarre)
-    print(Florizarre)
-    print(FlorizarreEx)
+    for pokemon in pokemons:
+        print(pokemon)
     input()
     menu()
 
-# Fonction pour afficher le menu
+# Function displaying the menu
 def menu():
     print("====")
     print("Menu")
     print("====")
     print()
-    print("1. Ouvrir un booster")
-    print("2. Afficher tous les pokémons")
-    print("3. Quitter")
-    choice = input("Votre choix : ")
+    print("1. Open a booster")
+    print("2. Display every pokemon")
+    print("3. Leave")
+    choice = input("Your choice : ")
     if choice == "1":
         booster()
     elif choice == "2":
         showallpokemons()
     elif choice == "3":
         print()
-        print("Merci d'avoir joué !")
+        print("Thanks for playing !")
     else:
-        print("Choix invalide. Veuillez réessayer.")
+        print("Incorrect choice. Please try again.")
         menu()
 
-# Fonction pour lancer le jeu
+# Function launching the game
 def launch():
-    print("=========================================")
-    print("Bienvenue dans le jeu de cartes Pokémon !")
-    print("=========================================")
+    print("=======================")
+    print("Welcome to PokePython !")
+    print("=======================")
     print()
-    print("Pour vous diriger vers le menu, appuyez sur Entrée.")
+    print("To see the menu, please press Enter")
     input()
     menu()
 
-# Appel de la fonction pour lancer le jeu
+# Calling the launching function
 launch()
