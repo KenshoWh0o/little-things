@@ -2,6 +2,8 @@
 #A program that simulates opening Pokémon booster packs.
 
 import random
+import sys
+sys.path.append('')
 
 # Variables
 Charmander = "#1 - Charmander - *"
